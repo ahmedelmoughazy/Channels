@@ -1,0 +1,22 @@
+input_dir: Monshaat_Contributers_IOS
+output_dir: Monshaat_Contributers_IOS
+strings:
+ inputs: Resources/Localizable.strings
+ outputs:
+   templateName: structured-swift4
+   output: Resources/Localized.swift
+ fallback: Base
+xcassets:
+ - inputs:
+     - Resources/Images.xcassets
+     - Resources/Colors.xcassets
+   outputs:
+     - templateName: swift4
+       output: Resources/Assets.swift
+
+fonts:
+ inputs: Resources/fonts/
+ filter: .+\.otf$
+ outputs:
+   templateName: swift4
+   output:  Resources/fonts/Fonts.swift
