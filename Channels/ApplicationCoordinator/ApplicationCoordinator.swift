@@ -25,6 +25,10 @@ class ApplicationCoordinator: Coordinator {
     func start() {
         startHome()
         window?.makeKeyAndVisible()
+        
+        let splash = SplashScreen(frame: UIScreen.main.bounds)
+        window?.addSubview(splash)
+        splash.start()
     }
 }
 

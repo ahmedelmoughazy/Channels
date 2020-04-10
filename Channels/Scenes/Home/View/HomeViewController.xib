@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Channels" customModuleProvider="target">
             <connections>
+                <outlet property="homeLabel" destination="5kO-ZD-ADP" id="7dx-ox-NxH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
