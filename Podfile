@@ -7,5 +7,6 @@ target 'Channels' do
 
   # Pods for Channels
   pod 'Moya', '~> 14.0'
+  pod 'SDWebImage'
   pod 'SwiftSiriWaveformView', '~> 2.4'
 end

@@ -17,4 +17,21 @@ class HomePresenter: HomePresenterProtocol {
         self.view = view
         self.model = model
     }
+    
+    func getData() {
+        
+        var sections: [Section<AnyHashable, [AnyHashable]>] = []
+        
+        sections.append(Section(headerItem: EpisodeSection(media: model.getEpisodes()),
+                                sectionItems: model.getEpisodes()))
+        let channels = model.getChannels()
+        for channel in channels {
+            sections.append(Section(headerItem: channel, sectionItems: channel.latestMedia ?? [Media]()))
+        }
+        
+        sections.append(Section(headerItem: CategoreySection(categories: model.getCategories()),
+                                sectionItems: model.getCategories()))
+        view.renderView(with: sections)
+    }
+
 }

@@ -5,4 +5,7 @@
   Created by Ahmed Refaat on 4/3/20.
   Copyright © 2020 Ibtikar. All rights reserved.
 */
-"Hi" = "Hi";
+
+// MARK: - Home Screen
+"home.screen.title" = "Channels";
+"home.screen.sections.episodes" = "New Episodes";

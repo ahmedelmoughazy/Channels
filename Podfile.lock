@@ -4,23 +4,29 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
   - SwiftSiriWaveformView (2.4.0)
 
 DEPENDENCIES:
   - Moya (~> 14.0)
+  - SDWebImage
   - SwiftSiriWaveformView (~> 2.4)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
+    - SDWebImage
     - SwiftSiriWaveformView
 
 SPEC CHECKSUMS:
   Alamofire: 0fe5fd24b4298dc377a6550da7d5f1b30e286fcb
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   SwiftSiriWaveformView: baa04ed2089e854af00ea54c38a7700ca43d7ae0
 
-PODFILE CHECKSUM: 919fc4c345fd7f35b121e35f357376849ad764fe
+PODFILE CHECKSUM: 24d83bda2677e122cd6292d9c09567b2030d6ca5
 
 COCOAPODS: 1.9.1
