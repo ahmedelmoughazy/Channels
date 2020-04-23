@@ -17,6 +17,8 @@ internal enum L10n {
       /// Channels
       internal static let title = L10n.tr("Localizable", "home.screen.title")
       internal enum Sections {
+        /// Browse by categories
+        internal static let categories = L10n.tr("Localizable", "home.screen.sections.categories")
         /// New Episodes
         internal static let episodes = L10n.tr("Localizable", "home.screen.sections.episodes")
       }

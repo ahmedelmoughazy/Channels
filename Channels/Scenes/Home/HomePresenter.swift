@@ -20,7 +20,7 @@ class HomePresenter: HomePresenterProtocol {
     
     func getData() {
         
-        var sections: [Section<AnyHashable, [AnyHashable]>] = []
+        var sections: [SectionType] = []
         
         sections.append(Section(headerItem: EpisodeSection(media: model.getEpisodes()),
                                 sectionItems: model.getEpisodes()))

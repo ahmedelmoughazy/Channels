@@ -19,7 +19,7 @@ struct DataSource<T: Hashable> {
 
 class EpisodeSection: Hashable {
     
-    var sectionTitle: String = "New Episodes"
+    var sectionTitle: String = L10n.Home.Screen.Sections.episodes
     
     var media: [Media]?
     
@@ -40,7 +40,7 @@ class EpisodeSection: Hashable {
 
 class CategoreySection: Hashable {
     
-    var sectionTitle: String = "Browse by categories"
+    var sectionTitle: String = L10n.Home.Screen.Sections.categories
     
     var categories: [Categorey]?
     

@@ -26,12 +26,9 @@ extension SmallCollectionViewCell {
     func configure() {
         
         titleLabel.font = FontFamily.Gilroy.extraBold.font(size: 18)
-    //    titleLabel.adjustsFontForContentSizeCategory = true
         titleLabel.textColor = UIColor.white
         titleLabel.lineBreakMode = .byWordWrapping
-  //      titleLabel.numberOfLines = 0
         categoryLabel.font = FontFamily.Roboto.medium.font(size: 14)
-      //  categoryLabel.adjustsFontForContentSizeCategory = true
         categoryLabel.textColor = Asset.Colors.manateeColor.color
         
         setupView()

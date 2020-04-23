@@ -9,3 +9,4 @@
 // MARK: - Home Screen
 "home.screen.title" = "Channels";
 "home.screen.sections.episodes" = "New Episodes";
+"home.screen.sections.categories" = "Browse by categories";

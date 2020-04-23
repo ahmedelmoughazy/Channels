@@ -18,7 +18,6 @@ class HeaderView: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setupView()
     }
     
@@ -38,6 +37,7 @@ class HeaderView: UICollectionReusableView {
             iconImageViewWidth.constant = 0
             titleLabel.text = header.sectionTitle
             titleLabel.textColor = Asset.Colors.silverColor.color
+            subtitleLabel.text = nil
         }
         
         if let header = sectionType as? Channel {
@@ -46,7 +46,7 @@ class HeaderView: UICollectionReusableView {
                                          placeholderImage: Asset.Images.iconPlaceHolder.image)
             titleLabel.text = header.title
             titleLabel.textColor = UIColor.white
-            subtitleLabel.text = String(describing: header.mediaCount ?? 0)
+            subtitleLabel.text = String(describing: header.mediaCount ?? 0) + " episodes"
         }
         
         if let header = sectionType as? CategoreySection {

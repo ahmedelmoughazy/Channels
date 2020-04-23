@@ -35,6 +35,7 @@ class HomeViewController: BaseViewController<HomePresenter> {
             .largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: Asset.Colors.silverColor.color]
         self.navigationController?.navigationBar
             .titleTextAttributes = [NSAttributedString.Key.foregroundColor: Asset.Colors.silverColor.color]
+        self.navigationController?.navigationBar.layoutMargins.left = 36
     }
     
     func configureCollectionView() {

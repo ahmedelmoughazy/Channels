@@ -262,6 +262,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		3470801B244A163A0052D934 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				34DF247E2447E8FF00AC3545 /* HomeAdaptor.swift */,
+				340EFCDE24487347004EBAA8 /* HomeAdaptor+Delegate.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		3497AF7A2447D53B00534943 /* HeaderFooter */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,14 +483,13 @@
 		34C6EE5D242A1327007E03AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3470801B244A163A0052D934 /* Adapter */,
 				34C6EE67242A1327007E03AF /* View */,
-				34DF247E2447E8FF00AC3545 /* HomeAdaptor.swift */,
 				34C6EE6A242A1327007E03AF /* HomePresenter.swift */,
 				34C6EE65242A1327007E03AF /* HomeModel.swift */,
 				34C90BDF244678F900EFAC9E /* CustomSectionModel.swift */,
 				34C6EE61242A1327007E03AF /* HomeCoordinator.swift */,
 				34C6EE66242A1327007E03AF /* HomeProtocols.swift */,
-				340EFCDE24487347004EBAA8 /* HomeAdaptor+Delegate.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

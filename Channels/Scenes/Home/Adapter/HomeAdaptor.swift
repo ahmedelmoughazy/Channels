@@ -87,6 +87,7 @@ class HomeAdaptor: NSObject {
 // MARK: UICollectionViewDataSource
 
 extension HomeAdaptor {
+    
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<SectionType, AnyHashable>(collectionView:
         collectionView) { (collectionView, indexPath, item) -> UICollectionViewCell? in
@@ -149,6 +150,7 @@ extension HomeAdaptor {
 // MARK: UICollectionViewLayout
 
 extension HomeAdaptor {
+    
     func configureLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, _) -> NSCollectionLayoutSection? in
             
@@ -159,7 +161,7 @@ extension HomeAdaptor {
             }
             
             if let channel = sectionType as? Channel {
-                if channel.title == "Mindvalley Films" {
+                if channel.latestMedia?[0].type == "video" {
                     return self.getWideCellSectionLayout()
                 } else {
                     return self.getTightCellSectionLayout()
