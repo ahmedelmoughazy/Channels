@@ -9,7 +9,7 @@
 import UIKit
 
 class WideCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet private weak var coverBackgroundView: UIImageView!
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -19,7 +19,7 @@ class WideCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         configure()
     }
-
+    
 }
 
 extension WideCollectionViewCell {
@@ -74,10 +74,29 @@ extension WideCollectionViewCell {
         categoryLabel.text = media.channel?.title
         
         if let url = media.coverAsset?.url {
-            coverBackgroundView.sd_setImage(with: URL(string: url),
-                                            placeholderImage: Asset.Images.posterPlaceHolder.image)
-            coverImageView.sd_setImage(with: URL(string: url),
-                                       placeholderImage: Asset.Images.posterPlaceHolder.image)
+            coverBackgroundView.kf.setImage(with: URL(string: url),
+                                            placeholder: Asset.Images.posterPlaceHolder.image,
+                                            options: nil,
+                                            progressBlock: nil) { result in
+                                                switch result {
+                                                case .success(let value):
+                                                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                                                case .failure(let error):
+                                                    print("Job failed: \(error.localizedDescription)")
+                                                }
+            }
+            coverImageView.kf.setImage(with: URL(string: url),
+                                       placeholder: Asset.Images.posterPlaceHolder.image,
+                                       options: nil,
+                                       progressBlock: nil) { result in
+                                        switch result {
+                                        case .success(let value):
+                                            print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                                        case .failure(let error):
+                                            print("Job failed: \(error.localizedDescription)")
+                                        }
+            }
+            
         }
         
     }

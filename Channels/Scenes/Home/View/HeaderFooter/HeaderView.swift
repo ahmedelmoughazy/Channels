@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class HeaderView: UICollectionReusableView {
     
@@ -42,8 +42,18 @@ class HeaderView: UICollectionReusableView {
         
         if let header = sectionType as? Channel {
             iconImageViewWidth.constant = 45
-            sectionImageView.sd_setImage(with: URL(string: header.iconAsset?.thumbnailUrl ?? ""),
-                                         placeholderImage: Asset.Images.iconPlaceHolder.image)
+            
+            sectionImageView.kf.setImage(with: URL(string: header.iconAsset?.thumbnailUrl ?? ""),
+                                         placeholder: Asset.Images.iconPlaceHolder.image,
+                                         options: nil,
+                                         progressBlock: nil) { result in
+                                            switch result {
+                                            case .success(let value):
+                                                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                                            case .failure(let error):
+                                                print("Job failed: \(error.localizedDescription)")
+                                            }
+            }
             titleLabel.text = header.title
             titleLabel.textColor = UIColor.white
             subtitleLabel.text = String(describing: header.mediaCount ?? 0) + " episodes"

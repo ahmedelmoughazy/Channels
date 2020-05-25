@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
 }
@@ -16,7 +17,7 @@ protocol HomeViewProtocol: BaseViewProtocol {
 }
 
 protocol HomeModelProtocol: BaseModelProtocol {
-    func getChannels() -> [Channel]
-    func getEpisodes() -> [Media]
-    func getCategories() -> [Categorey]
+    func getChannels() -> Promise<[Channel]>
+    func getEpisodes() -> Promise<[Media]>
+    func getCategories() -> Promise<[Categorey]>
 }
