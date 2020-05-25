@@ -13,6 +13,11 @@ typealias StatusCode = Int
 
 class NetworkManager {
     
+    let tokenClosure: (AuthorizationType) -> String = { _ in
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return "" }
+        return token
+    }
+    
     static var shared: NetworkManager!
     var networkConfig: NetworkDefaults!
 
@@ -20,13 +25,16 @@ class NetworkManager {
     
     init(config: NetworkDefaults = NetworkDefaults.defaults) {
         self.networkConfig = config
-        
+
+        let authPlugin = AccessTokenPlugin(tokenClosure: tokenClosure)
+
         let headerPlugin = StaticHeaderPlugin(
             headers: [:])
         let config = NetworkLoggerPlugin.Configuration(
             logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose)
-        provider = MoyaProvider<MultiTarget>(//manager: ,
-            plugins: [headerPlugin, NetworkLoggerPlugin(configuration: config)])
+        provider = MoyaProvider<MultiTarget>(plugins: [headerPlugin,
+                                                       authPlugin,
+                                                       NetworkLoggerPlugin(configuration: config)])
     }
     
 }

@@ -10,7 +10,9 @@ import Foundation
 import Moya
 
 enum  ApiServices {
-
+    case episodes
+    case channels
+    case categories
 }
 
 extension ApiServices: TargetType {
@@ -18,12 +20,24 @@ extension ApiServices: TargetType {
     var baseURL: URL {
         return URL(string: NetworkManager.shared.networkConfig.baseUrl)!
     }
+    
     var path: String {
-        return ""
+        switch self {
+        case .episodes:
+            return "/raw/z5AExTtw"
+        case .channels:
+            return "/raw/Xt12uVhM"
+        case .categories:
+            return "/raw/A0CgArX3"
+        }
     }
     
     var method: Moya.Method {
-        return .get
+        switch self {
+        case .episodes, .channels, .categories:
+            return .get
+        }
+
     }
     
     var sampleData: Data {
@@ -42,5 +56,15 @@ extension ApiServices: TargetType {
 extension ApiServices: MoyaCacheable {
     var cachePolicy: MoyaCacheablePolicy {
         return .reloadIgnoringCacheData
+    }
+}
+
+extension ApiServices: AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType? {
+        switch self {
+        default:
+            return nil
+        }
     }
 }

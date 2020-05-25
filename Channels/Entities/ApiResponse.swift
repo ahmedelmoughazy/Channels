@@ -9,6 +9,7 @@
 import Foundation
 
 struct APIResponse<T: Codable>: Codable {
+    
     var status: Int?
     var success: Bool?
     var data: T?

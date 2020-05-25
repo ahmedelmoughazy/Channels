@@ -55,7 +55,7 @@ class SplashScreen: UIView {
                 self.alpha = 0.0
             })
         }, completion: { _  in
-            //            self.removeFromSuperview()
+            self.removeFromSuperview()
         })
     }
 }

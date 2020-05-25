@@ -9,7 +9,7 @@
 import Foundation
 
 struct NetworkDefaults {
-    var baseUrl: String = ""
+    var baseUrl: String = "https://pastebin.com"
     var apiKey: String = ""
     var language: String = "en-US"
     static var `defaults` : NetworkDefaults {

@@ -11,8 +11,19 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
-  /// Hi
-  internal static let hi = L10n.tr("Localizable", "Hi")
+
+  internal enum Home {
+    internal enum Screen {
+      /// Channels
+      internal static let title = L10n.tr("Localizable", "home.screen.title")
+      internal enum Sections {
+        /// Browse by categories
+        internal static let categories = L10n.tr("Localizable", "home.screen.sections.categories")
+        /// New Episodes
+        internal static let episodes = L10n.tr("Localizable", "home.screen.sections.episodes")
+      }
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

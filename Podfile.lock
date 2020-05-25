@@ -1,26 +1,44 @@
 PODS:
   - Alamofire (5.0.4)
+  - Kingfisher (5.13.3):
+    - Kingfisher/Core (= 5.13.3)
+  - Kingfisher/Core (5.13.3)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
   - SwiftSiriWaveformView (2.4.0)
 
 DEPENDENCIES:
+  - Kingfisher (~> 5.0)
   - Moya (~> 14.0)
+  - PromiseKit (~> 6.8)
   - SwiftSiriWaveformView (~> 2.4)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - Moya
+    - PromiseKit
     - SwiftSiriWaveformView
 
 SPEC CHECKSUMS:
   Alamofire: 0fe5fd24b4298dc377a6550da7d5f1b30e286fcb
+  Kingfisher: d2b3d6a7200c93b34de9afcdf25c8dd9282ec277
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SwiftSiriWaveformView: baa04ed2089e854af00ea54c38a7700ca43d7ae0
 
-PODFILE CHECKSUM: 919fc4c345fd7f35b121e35f357376849ad764fe
+PODFILE CHECKSUM: bd779dc8f563d677e365150e03092795a859c947
 
 COCOAPODS: 1.9.1
