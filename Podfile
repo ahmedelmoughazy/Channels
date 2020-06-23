@@ -8,6 +8,6 @@ target 'Channels' do
   # Pods for Channels
   pod 'Moya', '~> 14.0'
   pod 'Kingfisher', '~> 5.0'
-  pod "PromiseKit", "~> 6.8"
+  pod "PromiseKit", "~> 6.8", :inhibit_warnings => true
   pod 'SwiftSiriWaveformView', '~> 2.4'
 end

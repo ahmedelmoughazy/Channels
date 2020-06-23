@@ -192,9 +192,9 @@ extension HomeAdaptor {
             subitems: [item])
         
         let sectionLayout = NSCollectionLayoutSection(group: group)
-        sectionLayout.orthogonalScrollingBehavior = .continuous
+        sectionLayout.orthogonalScrollingBehavior = .groupPagingCentered
         sectionLayout.interGroupSpacing = 0
-        sectionLayout.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        sectionLayout.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                 heightDimension: .estimated(78))
