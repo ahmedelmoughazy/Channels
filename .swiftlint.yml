@@ -4,6 +4,7 @@ disabled_rules: # rule identifiers to exclude from running
  - trailing_semicolon
  - sorted_imports
  - control_statement
+ - comment_spacing
 
 excluded:
   - Frameworks
